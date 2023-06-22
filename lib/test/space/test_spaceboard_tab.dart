@@ -28,231 +28,92 @@ class SpaceListBoard extends StatelessWidget {
                         style: BorderStyle.solid,
                         width: 1),
                     borderRadius: BorderRadius.circular(16)),
-                child: SizedBox(
-                  height: 150,
-                  child: Row(
-                    children: [
-                      SizedBox(width: common_padding),
-                      Expanded(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            titleText,
-                            style: Theme.of(context).textTheme.subtitle1,
-                          ),
-                          Expanded(
-                            child: Center(
-                              child: Container(
-                                  child: SizedBox(
-                                      height: 100,
-                                      width: 80,
-                                      child: ExtendedImage.network(
-                                          'https://picsum.photos/100',
-                                          borderRadius:
-                                              BorderRadius.circular(12),
-                                          shape: BoxShape.rectangle))),
+                child: InkWell(
+                  child: SizedBox(
+                    height: 150,
+                    child: Row(
+                      children: [
+                        SizedBox(width: common_padding),
+                        Expanded(
+                            child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              titleText,
+                              style: Theme.of(context).textTheme.subtitle1,
                             ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 15,
-                                child: FittedBox(
-                                  fit: BoxFit.fitHeight,
-                                  child: Row(
-                                    children: [
-                                      Text('2023.02.00',
-                                          style: TextStyle(color: Colors.grey)),
-                                      SizedBox(width: 10),
-                                      Text('임대차',
-                                          style: TextStyle(color: Colors.grey)),
-                                      SizedBox(width: 10),
-                                      Text('보안 활성화',
-                                          style: TextStyle(color: Colors.grey)),
-                                    ],
+                            Expanded(
+                              child: Center(
+                                child: Container(
+                                    child: SizedBox(
+                                        height: 100,
+                                        width: 80,
+                                        child: ExtendedImage.network(
+                                            'https://picsum.photos/100',
+                                            borderRadius:
+                                                BorderRadius.circular(12),
+                                            shape: BoxShape.rectangle))),
+                              ),
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  height: 15,
+                                  child: FittedBox(
+                                    fit: BoxFit.fitHeight,
+                                    child: Row(
+                                      children: [
+                                        Text('2023.02.00',
+                                            style: TextStyle(color: Colors.grey)),
+                                        SizedBox(width: 10),
+                                        Text('임대차',
+                                            style: TextStyle(color: Colors.grey)),
+                                        SizedBox(width: 10),
+                                        Text('보안 활성화',
+                                            style: TextStyle(color: Colors.grey)),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ))
+                      ],
+                    ),
+                  ),
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<Widget>(
+                          builder: (BuildContext context) {
+                            return Scaffold(
+                              appBar:
+                              AppBar(title: const Text('ListTile Hero')),
+                              body: Center(
+                                child: Hero(
+                                  tag: 'ListTile-Hero',
+                                  child: Material(
+                                    child: ListTile(
+                                      title: const Text('ListTile with Hero'),
+                                      subtitle:
+                                      const Text('Tap here to go back'),
+                                      tileColor: Colors.black,
+                                      onTap: () {
+                                        Navigator.pop(context);
+                                      },
+                                    ),
                                   ),
                                 ),
                               ),
-                            ],
-                          )
-                        ],
-                      ))
-                    ],
-                  ),
+                            );
+                          }),
+                    );
+                  },
                 ),
               ),
             ),
-            SizedBox(height: common_padding),
-            SizedBox(
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                        color: Colors.black,
-                        style: BorderStyle.solid,
-                        width: 1),
-                    borderRadius: BorderRadius.circular(16)),
-                child: SizedBox(
-                  height: 150,
-                  child: Row(
-                    children: [
-                      SizedBox(width: common_padding),
-                      Expanded(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            titleText,
-                            style: Theme.of(context).textTheme.subtitle1,
-                          ),
-                          Expanded(
-                            child: Center(
-                              child: Container(
-                                  child: SizedBox(
-                                      height: 100,
-                                      width: 80,
-                                      child: ExtendedImage.network(
-                                          'https://picsum.photos/100',
-                                          borderRadius:
-                                              BorderRadius.circular(12),
-                                          shape: BoxShape.rectangle))),
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 15,
-                                child: FittedBox(
-                                  fit: BoxFit.fitHeight,
-                                  child: Row(
-                                    children: [
-                                      Text('2023.02.00',
-                                          style: TextStyle(color: Colors.grey)),
-                                      SizedBox(width: 10),
-                                      Text('임대차',
-                                          style: TextStyle(color: Colors.grey)),
-                                      SizedBox(width: 10),
-                                      Text('보안 활성화',
-                                          style: TextStyle(color: Colors.grey)),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ))
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: common_padding),
-            SizedBox(
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                        color: Colors.black,
-                        style: BorderStyle.solid,
-                        width: 1),
-                    borderRadius: BorderRadius.circular(16)),
-                child: SizedBox(
-                  height: 150,
-                  child: Row(
-                    children: [
-                      SizedBox(width: common_padding),
-                      Expanded(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            titleText,
-                            style: Theme.of(context).textTheme.subtitle1,
-                          ),
-                          Expanded(
-                            child: Center(
-                              child: Container(
-                                  child: SizedBox(
-                                      height: 100,
-                                      width: 80,
-                                      child: ExtendedImage.network(
-                                          'https://picsum.photos/100',
-                                          borderRadius:
-                                              BorderRadius.circular(12),
-                                          shape: BoxShape.rectangle))),
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                height: 15,
-                                child: FittedBox(
-                                  fit: BoxFit.fitHeight,
-                                  child: Row(
-                                    children: [
-                                      Text('2023.02.00',
-                                          style: TextStyle(color: Colors.grey)),
-                                      SizedBox(width: 10),
-                                      Text('임대차',
-                                          style: TextStyle(color: Colors.grey)),
-                                      SizedBox(width: 10),
-                                      Text('보안 활성화',
-                                          style: TextStyle(color: Colors.grey)),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          )
-                        ],
-                      ))
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: common_padding),
-            SizedBox(
-              child: Container(
-                decoration: BoxDecoration(
-                    border: Border.all(
-                        color: Colors.black,
-                        style: BorderStyle.solid,
-                        width: 1),
-                    borderRadius: BorderRadius.circular(16)),
-                child: SizedBox(
-                  height: 150,
-                  child: Row(
-                    children: [
-                      SizedBox(width: common_padding),
-                      Expanded(
-                          child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            titleText1==null? '새로운 공간 추가하기':titleText,
-                            style: Theme.of(context).textTheme.subtitle1,
-                          ),
-                          Expanded(
-                            child: Center(
-                              child: Container(
-                                  child: SizedBox(
-                                      height: 100,
-                                      width: 80,
-                                      child: Icon(Icons.add_box_outlined, size: 50))),
-                            ),
-                          ),
-                        ],
-                      ))
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
           ],
         ),
       ),
